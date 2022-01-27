@@ -23,7 +23,7 @@ To that end, it first finds pairs of commits from both commit ranges
 that correspond with each other. Two commits are said to correspond when
 the diff between their patches (i.e. the author information, the commit
 message and the commit diff) is reasonably small compared to the
-patches' size. See ``Algorithm`` below for details.
+patches' size. See ``ALGORITHM`` below for details.
 
 Finally, the list of matching commits is shown in the order of the
 second commit range, with unmatched commits being inserted just after
@@ -66,7 +66,7 @@ to revert to color all lines according to the outer diff markers
 	Defaults to 60. Try a larger value if `git range-diff` erroneously
 	considers a large change a total rewrite (deletion of one commit
 	and addition of another), and a smaller one in the reverse case.
-	See the ``Algorithm`` section below for an explanation why this is
+	See the ``ALGORITHM`` section below for an explanation why this is
 	needed.
 
 --left-only::

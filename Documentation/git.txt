@@ -128,7 +128,7 @@ sensitive information can be part of the key.
 --paginate::
 	Pipe all output into 'less' (or if set, $PAGER) if standard
 	output is a terminal.  This overrides the `pager.<cmd>`
-	configuration options (see the "Configuration Mechanism" section
+	configuration options (see the "CONFIGURATION MECHANISM" section
 	below).
 
 -P::
@@ -1007,7 +1007,7 @@ unmerged version of a file when a merge is in progress.
 FURTHER DOCUMENTATION
 ---------------------
 
-See the references in the "description" section to get started
+See the references in the "DESCRIPTION" section to get started
 using Git.  The following is probably more detail than necessary
 for a first-time user.
 

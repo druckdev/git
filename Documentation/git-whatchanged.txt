@@ -25,7 +25,7 @@ many people who learned Git long before `git log` was invented by
 reading Linux kernel mailing list are trained to type it.
 
 
-Examples
+EXAMPLES
 --------
 `git whatchanged -p v2.6.12.. include/scsi drivers/scsi`::
 

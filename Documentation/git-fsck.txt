@@ -126,7 +126,7 @@ the hopes that somebody else has the object you have corrupted).
 If core.commitGraph is true, the commit-graph file will also be inspected
 using 'git commit-graph verify'. See linkgit:git-commit-graph[1].
 
-Extracted Diagnostics
+EXTRACTED DIAGNOSTICS
 ---------------------
 
 unreachable <type> <object>::
@@ -150,7 +150,7 @@ hash mismatch <object>::
 	object database value.
 	This indicates a serious data integrity problem.
 
-Environment Variables
+ENVIRONMENT VARIABLES
 ---------------------
 
 GIT_OBJECT_DIRECTORY::

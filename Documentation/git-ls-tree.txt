@@ -80,7 +80,7 @@ OPTIONS
 	implicitly uses the root level of the tree as the sole path argument.
 
 
-Output Format
+OUTPUT FORMAT
 -------------
         <mode> SP <type> SP <object> TAB <file>
 

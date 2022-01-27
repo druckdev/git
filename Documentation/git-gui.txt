@@ -48,7 +48,7 @@ version::
 	Display the currently running version of 'git gui'.
 
 
-Examples
+EXAMPLES
 --------
 `git gui blame Makefile`::
 
@@ -106,7 +106,7 @@ linkgit:gitk[1]::
 	and file differences.  gitk is the utility started by
 	'git gui''s Repository Visualize actions.
 
-Other
+OTHER
 -----
 'git gui' is actually maintained as an independent project, but stable
 versions are distributed as part of the Git suite for the convenience

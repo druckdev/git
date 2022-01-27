@@ -183,7 +183,7 @@ green, to make it more obvious that they describe how the diff itself
 changed.
 
 
-Algorithm
+ALGORITHM
 ---------
 
 The general idea is this: we generate a cost matrix between the commits

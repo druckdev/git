@@ -67,7 +67,7 @@ OPTIONS
 	stuck to the option without a space. `--no-gpg-sign` is useful to
 	countermand a `--gpg-sign` option given earlier on the command line.
 
-Commit Information
+COMMIT INFORMATION
 ------------------
 
 A commit encapsulates:
@@ -82,7 +82,7 @@ for one to be entered and terminated with ^D.
 
 include::date-formats.txt[]
 
-Discussion
+DISCUSSION
 ----------
 
 include::i18n.txt[]

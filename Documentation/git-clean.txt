@@ -72,7 +72,7 @@ OPTIONS
 	Remove only files ignored by Git.  This may be useful to rebuild
 	everything from scratch, but keep manually created files.
 
-Interactive mode
+INTERACTIVE MODE
 ----------------
 When the command enters the interactive mode, it shows the
 files and directories to be cleaned, and goes into its

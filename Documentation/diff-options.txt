@@ -616,6 +616,15 @@ ifndef::git-format-patch[]
 Also, these upper-case letters can be downcased to exclude.  E.g.
 `--diff-filter=ad` excludes added and deleted paths.
 +
+Beware that the order of the filter matter when mixing upper and
+lower-case of the same character. The filter is read from left to right so a
+letter can overwrite the same letter in different case left of it.
+-------
+The filter `Aa` will select all files that are not Added.
+The filter `aA` will select all files. That is because `a` selects all files
+that are not Added, and `A` selects those that are.
+-------
++
 Note that not all diffs can feature all types. For instance, diffs
 from the index to the working tree can never have Added entries
 (because the set of paths included in the diff is limited by what is in

@@ -199,7 +199,7 @@ working tree to be stashed.  The stash entry is constructed such
 that its index state is the same as the index state of your
 repository, and its worktree contains only the changes you selected
 interactively.  The selected changes are then rolled back from your
-worktree. See the ``Interactive Mode'' section of linkgit:git-add[1]
+worktree. See the ``INTERACTIVE MODE'' section of linkgit:git-add[1]
 to learn how to operate the `--patch` mode.
 +
 The `--patch` option implies `--keep-index`.  You can use

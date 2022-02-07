@@ -276,7 +276,7 @@ When switching branches with `--merge`, staged changes may be lost.
 	working tree (and if a `<tree-ish>` was specified, the index).
 +
 This means that you can use `git checkout -p` to selectively discard
-edits from your current working tree. See the ``Interactive Mode''
+edits from your current working tree. See the ``INTERACTIVE MODE''
 section of linkgit:git-add[1] to learn how to operate the `--patch` mode.
 +
 Note that this option uses the no overlay mode by default (see also

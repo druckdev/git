@@ -50,7 +50,7 @@ The content to be committed can be specified in several ways:
 5. by using the --interactive or --patch switches with the 'commit' command
    to decide one by one which files or hunks should be part of the commit
    in addition to contents in the index,
-   before finalizing the operation. See the ``Interactive Mode'' section of
+   before finalizing the operation. See the ``INTERACTIVE MODE'' section of
    linkgit:git-add[1] to learn how to operate these modes.
 
 The `--dry-run` option can be used to obtain a

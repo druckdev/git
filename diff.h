@@ -611,6 +611,7 @@ void diff_warn_rename_limit(const char *varname, int needed, int degraded_cc);
 /* these are not diff-raw status letters proper, but used by
  * diffcore-filter insn to specify additional restrictions.
  */
+#define DIFF_STATUS_FILTER_AND		'&'
 #define DIFF_STATUS_FILTER_AON		'*'
 #define DIFF_STATUS_FILTER_BROKEN	'B'
 

@@ -1208,14 +1208,14 @@ static void die_with_unpushed_submodules(struct string_list *needs_pushing)
 	die(_("Aborting."));
 }
 
-static int run_pre_push_hook(struct transport *transport,
-			     struct ref *remote_refs)
+static int run_push_hook(struct transport *transport, struct ref *remote_refs,
+			     const char *hook_name)
 {
 	int ret = 0, x;
 	struct ref *r;
 	struct child_process proc = CHILD_PROCESS_INIT;
 	struct strbuf buf;
-	const char *hook_path = find_hook("pre-push");
+	const char *hook_path = find_hook(hook_name);
 
 	if (!hook_path)
 		return 0;
@@ -1225,7 +1225,7 @@ static int run_pre_push_hook(struct transport *transport,
 	strvec_push(&proc.args, transport->url);
 
 	proc.in = -1;
-	proc.trace2_hook_name = "pre-push";
+	proc.trace2_hook_name = hook_name;
 
 	if (start_command(&proc)) {
 		finish_command(&proc);
@@ -1333,7 +1333,7 @@ int transport_push(struct repository *r,
 		flags & TRANSPORT_PUSH_FORCE);
 
 	if (!(flags & TRANSPORT_PUSH_NO_HOOK))
-		if (run_pre_push_hook(transport, remote_refs))
+		if (run_push_hook(transport, remote_refs, "pre-push"))
 			goto done;
 
 	if ((flags & (TRANSPORT_RECURSE_SUBMODULES_ON_DEMAND |
@@ -1412,6 +1412,9 @@ int transport_push(struct repository *r,
 		for (ref = remote_refs; ref; ref = ref->next)
 			transport_update_tracking_ref(transport->remote, ref, verbose);
 	}
+
+	if (!(flags & TRANSPORT_PUSH_NO_HOOK))
+		run_push_hook(transport, remote_refs, "post-push");
 
 	if (porcelain && !push_ret)
 		puts("Done");

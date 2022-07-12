@@ -9552,7 +9552,7 @@ msgstr "đặt thượng nguồn cho git pull/status"
 msgid "prune locally removed refs"
 msgstr "xén tỉa những tham chiếu bị gỡ bỏ"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "vòng qua móc tiền-đẩy (pre-push)"
 
 msgid "push missing but relevant tags"

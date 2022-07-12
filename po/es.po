@@ -9582,7 +9582,7 @@ msgstr "configurar upstream para git pull/status"
 msgid "prune locally removed refs"
 msgstr "recortar refs eliminadas localmente"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "hacer un bypass al hook pre-push"
 
 msgid "push missing but relevant tags"

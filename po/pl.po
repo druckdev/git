@@ -19945,7 +19945,7 @@ msgid "prune locally removed refs"
 msgstr "przytnij lokalnie usunięte referencje"
 
 #: builtin/push.c:569
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "omiń skrypt pre-push"
 
 #: builtin/push.c:570

@@ -11883,7 +11883,7 @@ msgid "prune locally removed refs"
 msgstr "buang referensi terhapus lokal"
 
 #: builtin/push.c
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "lewati kail pra-dorong"
 
 #: builtin/push.c

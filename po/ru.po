@@ -9367,7 +9367,7 @@ msgstr "установить вышестоящую ветку для git pull/s
 msgid "prune locally removed refs"
 msgstr "почистить локально удаленные ссылки"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "пропустить перехватчик pre-push"
 
 msgid "push missing but relevant tags"

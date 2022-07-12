@@ -9750,7 +9750,7 @@ msgstr "Upstream für \"git pull/status\" setzen"
 msgid "prune locally removed refs"
 msgstr "lokal gelöschte Referenzen entfernen"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "\"pre-push hook\" umgehen"
 
 msgid "push missing but relevant tags"

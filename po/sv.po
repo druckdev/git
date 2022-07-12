@@ -9454,7 +9454,7 @@ msgstr "ställ in uppström för git pull/status"
 msgid "prune locally removed refs"
 msgstr "ta bort lokalt borttagna referenser"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "förbigå pre-push-krok"
 
 msgid "push missing but relevant tags"

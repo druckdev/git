@@ -9990,7 +9990,7 @@ msgstr "задаване на отдалеченото хранилище за �
 msgid "prune locally removed refs"
 msgstr "окастряне на указателите, които са премахнати от локалното хранилище"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "без изпълнение на куката преди изтласкване (pre-push)"
 
 msgid "push missing but relevant tags"

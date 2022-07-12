@@ -415,8 +415,8 @@ Specifying `--no-force-if-includes` disables this behavior.
 	submodule recursion is required.
 
 --[no-]verify::
-	Toggle the pre-push hook (see linkgit:githooks[5]).  The
-	default is --verify, giving the hook a chance to prevent the
+	Toggle the pre- and post-push hooks (see linkgit:githooks[5]).  The
+	default is --verify, giving the pre-push hook a chance to prevent the
 	push.  With --no-verify, the hook is bypassed completely.
 
 -4::

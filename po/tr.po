@@ -9538,7 +9538,7 @@ msgstr "git pull/status için üstkaynak ayarla"
 msgid "prune locally removed refs"
 msgstr "yerelde kaldırılan başvuruları buda"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "pre-push kancasını atla"
 
 msgid "push missing but relevant tags"

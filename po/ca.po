@@ -9687,7 +9687,7 @@ msgstr "estableix la font per a git pull/status"
 msgid "prune locally removed refs"
 msgstr "poda les referències eliminades localment"
 
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "evita el lligam de prepujada"
 
 msgid "push missing but relevant tags"

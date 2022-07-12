@@ -12455,7 +12455,7 @@ msgid "prune locally removed refs"
 msgstr "로컬에서 제거한 레퍼런스를 잘라냅니다"
 
 #: builtin/push.c:575
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "푸시 전 후크를 건너뜁니다"
 
 #: builtin/push.c:576

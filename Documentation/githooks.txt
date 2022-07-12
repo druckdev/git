@@ -24,8 +24,8 @@ linkgit:git-config[1]).
 Before Git invokes a hook, it changes its working directory to either
 $GIT_DIR in a bare repository or the root of the working tree in a non-bare
 repository. An exception are hooks triggered during a push ('pre-receive',
-'update', 'post-receive', 'post-update', 'push-to-checkout') which are always
-executed in $GIT_DIR.
+'update', 'pre-push', 'post-push', 'post-receive', 'post-update',
+'push-to-checkout') which are always executed in $GIT_DIR.
 
 Hooks can get their arguments via the environment, command-line
 arguments, and stdin. See the documentation for each hook below for
@@ -248,6 +248,19 @@ was specified by something other than a name which could be expanded (such as
 If this hook exits with a non-zero status, `git push` will abort without
 pushing anything.  Information about why the push is rejected may be sent
 to the user by writing to standard error.
+
+post-push
+~~~~~~~~~
+
+This hook is called by linkgit:git-push[1] after the push took place. It takes
+the same arguments and information over standard input as the
+<<pre-push,'pre-push'>> hook.
+
+This hook does not affect the outcome of `git-push` and it's exit status is
+ignored.
+
+It can for example be used to close a VPN connection that was opened in
+<<pre-push,'pre-push'>>.
 
 [[pre-receive]]
 pre-receive

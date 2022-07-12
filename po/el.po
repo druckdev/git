@@ -15336,7 +15336,7 @@ msgid "prune locally removed refs"
 msgstr "να γίνει κλάδεμα των τοπικά διεγραμμένων ref"
 
 #: builtin/push.c:578
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "να γίνει παράκαμψη του αγκίστρου προ δημοσίευσης"
 
 #: builtin/push.c:579

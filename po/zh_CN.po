@@ -11835,7 +11835,7 @@ msgid "prune locally removed refs"
 msgstr "清除本地删除的引用"
 
 #: builtin/push.c
-msgid "bypass pre-push hook"
+msgid "bypass pre- and post-push hooks"
 msgstr "绕过 pre-push 钩子"
 
 #: builtin/push.c

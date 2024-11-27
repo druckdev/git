@@ -280,6 +280,7 @@ branch. This is useful e.g. to maintain minimal clones of the default
 branch of some repository for search indexing.
 
 `--recurse-submodules`[`=`{empty}__<pathspec>__]::
+`--recursive`[`=`{empty}__<pathspec>__]::
 	After the clone is created, initialize and clone submodules
 	within based on the provided _<pathspec>_.  If no _=<pathspec>_ is
 	provided, all submodules are initialized and cloned.

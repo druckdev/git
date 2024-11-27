@@ -41,6 +41,7 @@ OPTIONS
 <git-dir>::
 	The repository to sync into.
 
+--advertise-refs::
 --http-backend-info-refs::
 	Used by linkgit:git-http-backend[1] to serve up
 	`$GIT_URL/info/refs?service=git-receive-pack` requests. See

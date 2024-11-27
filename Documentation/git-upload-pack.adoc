@@ -36,6 +36,7 @@ OPTIONS
 	This fits with the HTTP POST request processing model where
 	a program may read the request, write a response, and must exit.
 
+--advertise-refs::
 --http-backend-info-refs::
 	Used by linkgit:git-http-backend[1] to serve up
 	`$GIT_URL/info/refs?service=git-upload-pack` requests. See

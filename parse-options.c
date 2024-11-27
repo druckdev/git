@@ -1330,6 +1330,12 @@ static enum parse_opt_result usage_with_options_internal(struct parse_opt_ctx_t 
 			pos += usage_argh(opts, outfile);
 
 		if (opts->type == OPTION_ALIAS) {
+			// TODO: should this check if the aliased flag is
+			// hidden (i.e. PARSE_OPT_HIDDEN)?
+			/*
+			 * if (!full && (opts->flags & PARSE_OPT_HIDDEN))
+			 * 	continue;
+			 */
 			usage_padding(outfile, pos);
 			fprintf_ln(outfile, _("alias of --%s"),
 				   (const char *)opts->value);

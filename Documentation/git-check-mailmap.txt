@@ -49,9 +49,9 @@ printed; otherwise only ``$$<user@host>$$'' is printed.
 CONFIGURATION
 -------------
 
-See `mailmap.file` and `mailmap.blob` in linkgit:git-config[1] for how
-to specify a custom `.mailmap` target file or object.
+include::includes/cmd-config-section-all.txt[]
 
+include::config/mailmap.txt[]
 
 MAPPING AUTHORS
 ---------------

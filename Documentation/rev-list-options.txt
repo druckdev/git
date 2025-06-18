@@ -1184,7 +1184,7 @@ you would get an output like this:
 	-xxxxxxx... 1st on a
 -----------------------------------------------------------------------
 
---graph::
+--[no-]graph::
 	Draw a text-based graphical representation of the commit history
 	on the left hand side of the output.  This may cause extra lines
 	to be printed in between commits, in order for the graph history

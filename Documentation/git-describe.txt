@@ -69,6 +69,10 @@ OPTIONS
 	as many digits as needed to form a unique object name. An <n> of 0
 	will suppress long format, only showing the closest tag.
 
+--no-abbrev::
+	TODO?
+	See git-branch.txt
+
 --candidates=<n>::
 	Instead of considering only the 10 most recent tags as
 	candidates to describe the input commit-ish consider

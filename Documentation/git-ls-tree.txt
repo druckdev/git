@@ -75,6 +75,10 @@ OPTIONS
 	hexdigits long that uniquely refers the object.
 	Non default number of digits can be specified with --abbrev=<n>.
 
+--no-abbrev::
+	TODO?
+	See git-branch.txt
+
 --full-name::
 	Instead of showing the path names relative to the current working
 	directory, show the full path names.

@@ -92,6 +92,10 @@ include::blame-options.txt[]
 	Note that 1 column
 	is used for a caret to mark the boundary commit.
 
+--no-abbrev::
+	TODO?
+	See git-branch.txt
+
 
 THE DEFAULT FORMAT
 ------------------

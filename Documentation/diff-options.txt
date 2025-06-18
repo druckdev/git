@@ -547,6 +547,10 @@ endif::git-format-patch[]
 	names will be shown regardless of `--abbrev`.
 	Non default number of digits can be specified with `--abbrev=<n>`.
 
+--no-abbrev::
+	TODO?
+	See git-branch.txt
+
 `-B[<n>][/<m>]`::
 `--break-rewrites[=[<n>][/<m>]]`::
 	Break complete rewrite changes into pairs of delete and

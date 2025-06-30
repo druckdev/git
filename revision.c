@@ -2735,6 +2735,7 @@ void parse_revision_opt(struct rev_info *revs, struct parse_opt_ctx_t *ctx,
 void revision_opts_finish(struct rev_info *revs)
 {
 	if (revs->graph && revs->track_linear)
+		/* TODO: why not? */
 		die(_("options '%s' and '%s' cannot be used together"), "--show-linear-break", "--graph");
 
 	if (revs->graph) {

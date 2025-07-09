@@ -2426,6 +2426,11 @@ _git_notes ()
 	*,--*)
 		__gitcomp_builtin notes_$subcommand
 		;;
+	show,*)
+		# TODO: WIP test
+		# list all objcets with notes attached to them
+		__git notes list | awk '{ print $2 }'
+		;;
 	prune,*|get-ref,*)
 		# this command does not take a ref, do not complete it
 		;;

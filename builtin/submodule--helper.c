@@ -2611,8 +2611,8 @@ static int update_submodule(struct update_data *update_data)
 {
 	int ret;
 
-	if (validate_submodule_path(update_data->sm_path) < 0)
-		return -1;
+	// NOTE: validate_submodule_path removed since already done in the sole
+	//       caller `update_submodules`
 
 	ret = determine_submodule_update_strategy(the_repository,
 						  update_data->just_cloned,

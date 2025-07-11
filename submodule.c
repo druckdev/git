@@ -1127,6 +1127,9 @@ static int push_submodule(const char *path,
 			  int dry_run)
 {
 	if (validate_submodule_path(path) < 0)
+		// TODO[JPR]: test with `git push --recurse-submodules=on-demand|only`
+		// NOTE: makes sense here since we started already to push some
+		//       submodules, so we can continue as well
 		return 0;
 
 	if (for_each_remote_ref_submodule(path, has_remote, NULL) > 0) {
@@ -1508,6 +1511,10 @@ static struct repository *get_submodule_repo_for(struct repository *r,
 	return ret;
 }
 
+/* TODO[JPR]: Is called by `get_fetch_task_from_{index,changed}()`, which just
+ * continue if we return NULL. Both are in turn called by `get_next_submodule()`
+ * which is registered as the `get_next_task` function.
+ */
 static struct fetch_task *fetch_task_create(struct submodule_parallel_fetch *spf,
 					    const char *path,
 					    const struct object_id *treeish_name)
@@ -2559,6 +2566,21 @@ int get_superproject_working_tree(struct strbuf *buf)
 /*
  * Put the gitdir for a submodule (given relative to the main
  * repository worktree) into `buf`, or return -1 on error.
+ *
+ * Uses:
+ *
+ * - path.c:570: do_submodule_path()
+ *   - used by repo_submodule_path{,_append,_replace}
+ * - refs.c:2230: repo_get_submodule_ref_store()
+ *   - used 
+ *
+ * - submodule.c:539: open_submodule()
+ *   - used by show_submodule_{diff_summary,inline_diff}
+ *   - directly after, `show_submodule_header` is called which will print
+ *     "(commits not present)".
+ * - builtin/submodule--helper.c:1280
+ *
+ * TODO[JPR]: check these and write tests
  */
 int submodule_to_gitdir(struct repository *repo,
 			struct strbuf *buf, const char *submodule)

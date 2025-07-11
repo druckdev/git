@@ -3563,6 +3563,13 @@ static void builtin_diff(const char *name_a,
 		b_prefix = o->b_prefix;
 	}
 
+	// TODO[JPR]: would be nicer to get the path from the config by remote
+	// before calling show_submodule_diff_summary (i.e.
+	// validate_submodule_path), in case the submodule was moved and we're
+	// looking at a commit with the old path. Theoretically the new
+	// submodule could be different (since we don't know what happened at
+	// the URL) but it still requires the commits to present - which is
+	// pretty much the same in my eyes.
 	if (o->submodule_format == DIFF_SUBMODULE_LOG &&
 	    (!one->mode || S_ISGITLINK(one->mode)) &&
 	    (!two->mode || S_ISGITLINK(two->mode)) &&

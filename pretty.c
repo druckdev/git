@@ -1893,30 +1893,32 @@ static size_t format_commit_item(struct strbuf *sb, /* in UTF-8 */
 				 const char *placeholder,
 				 struct format_commit_context *context)
 {
-	size_t consumed, orig_len;
+	size_t consumed, i, orig_len;
 	enum {
-		NO_MAGIC,
-		ADD_LF_BEFORE_NON_EMPTY,
-		DEL_LF_BEFORE_EMPTY,
-		ADD_SP_BEFORE_NON_EMPTY
+		NO_MAGIC = 0,
+		ADD_LF_BEFORE_NON_EMPTY = 1,
+		DEL_LF_BEFORE_EMPTY = 2,
+		ADD_SP_BEFORE_NON_EMPTY = 4,
 	} magic = NO_MAGIC;
 
-	switch (placeholder[0]) {
-	case '-':
-		magic = DEL_LF_BEFORE_EMPTY;
-		break;
-	case '+':
-		magic = ADD_LF_BEFORE_NON_EMPTY;
-		break;
-	case ' ':
-		magic = ADD_SP_BEFORE_NON_EMPTY;
-		break;
-	default:
+	for (i = 0;; ++i) {
+		switch (placeholder[i]) {
+		case '-':
+			magic |= DEL_LF_BEFORE_EMPTY;
+			continue;
+		case '+':
+			magic |= ADD_LF_BEFORE_NON_EMPTY;
+			continue;
+		case ' ':
+			magic |= ADD_SP_BEFORE_NON_EMPTY;
+			continue;
+		default:
+			break;
+		}
 		break;
 	}
 	if (magic != NO_MAGIC) {
-		placeholder++;
-
+		placeholder += i;
 		switch (placeholder[0]) {
 		case 'w':
 			/*
@@ -1937,16 +1939,17 @@ static size_t format_commit_item(struct strbuf *sb, /* in UTF-8 */
 	if (magic == NO_MAGIC)
 		return consumed;
 
-	if ((orig_len == sb->len) && magic == DEL_LF_BEFORE_EMPTY) {
-		while (sb->len && sb->buf[sb->len - 1] == '\n')
-			strbuf_setlen(sb, sb->len - 1);
-	} else if (orig_len != sb->len) {
+	if (orig_len == sb->len) {
+		if (magic & DEL_LF_BEFORE_EMPTY)
+			while (sb->len && sb->buf[sb->len - 1] == '\n')
+				strbuf_setlen(sb, sb->len - 1);
+	} else {
+		if (magic == ADD_SP_BEFORE_NON_EMPTY)
+			strbuf_insertstr(sb, orig_len, " ");
 		if (magic == ADD_LF_BEFORE_NON_EMPTY)
 			strbuf_insertstr(sb, orig_len, "\n");
-		else if (magic == ADD_SP_BEFORE_NON_EMPTY)
-			strbuf_insertstr(sb, orig_len, " ");
 	}
-	return consumed + 1;
+	return consumed + i;
 }
 
 void userformat_find_requirements(const char *fmt, struct userformat_want *w)
